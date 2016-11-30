@@ -13,8 +13,6 @@ app.config['db'] = db.Cursor(config)
 print app.config
 
 #print app.config
-utils.write_log('web').info("just a test")
-utils.write_log('api').error("just a test")
 
 
 if __name__ == "__main__":
