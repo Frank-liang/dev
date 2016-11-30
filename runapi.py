@@ -18,4 +18,4 @@ utils.write_log('api').error("just a test")
 
 
 if __name__ == "__main__":
-    app.run(host=app.config['bind'],port=int(app.config['port']),debug=True)
+    app.run(host=app.config['bind'],port=int(app.config['port']),debug=False)
