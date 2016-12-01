@@ -10,7 +10,6 @@ config = utils.get_config('api')
 #将自定义的配置文件全部加载到全局的配置文件(app.config),可以在任意地方调用
 app.config.update(config)
 app.config['db'] = db.Cursor(config)
-print app.config
 
 #print app.config
 

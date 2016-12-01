@@ -15,7 +15,6 @@ def get_config(section=''):
     service_conf = os.path.join(work_dir,'conf/service.conf')
     config.read(service_conf)
     config_items = dict(config.items('common')) if config.has_section('common') else {}
-    print config_items
     if section and config.has_section(section):
         config_items.update(config.items(section))
     return config_items    
@@ -41,7 +40,7 @@ def validate(key, fix_pwd):
         write_log('api').warning('登录已经过期')
         return json.dumps({'code':1,'errmsg':'登录已经过期'})
     if fix_pwd == x[4]:
-        write_log('api').warning('api认证通过')
+        write_log('api').info('api认证通过')
         return json.dumps({'code':0,'username':x[0],'uid':x[2],'r_id':x[3]})
     else:
         write_log('api').warning('密码不正确')
