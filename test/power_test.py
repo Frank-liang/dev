@@ -40,7 +40,7 @@ def rpc():
                  }
             }
         '''
-        '''
+        
         #getbyid请求
         data = {
                 'jsonrpc':'2.0',
@@ -51,20 +51,20 @@ def rpc():
                     'where':{'name':'cdn'}
                  }
         }
-        '''
-        '''
+        
+        ''' 
         #getlist请求
         data = {
                 'jsonrpc':'2.0',
                 'method': 'power.getlist',      
                 'id':'1',
                 'params':{
-   #                 'output':['id','name','name_cn'],
+                    'output':['id','name','name_cn'],
                 }
         }
         
         '''
-        '''
+        ''' 
         #update请求
         data = {
                 'jsonrpc':'2.0',
@@ -72,11 +72,11 @@ def rpc():
                 'id':'1',
                 'params':{
                     'data':{'name_cn':'cdntest'},
-                    'where':{'id':3}
+                    'where':{'id':15}
                 }
         }
         '''
-        
+        ''' 
         #delete请求
         data = {
                 'jsonrpc':'2.0',
@@ -86,7 +86,7 @@ def rpc():
                     'where':{'id':17}
                 }
         }
-        
+        '''
 
         r = requests.post(url, headers=headers,json=data)
 
