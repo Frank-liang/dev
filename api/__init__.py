@@ -8,3 +8,4 @@ app = Flask(__name__)
 jsonrpc = JSONRPC(app,'/api')
 import login
 import power
+import role
